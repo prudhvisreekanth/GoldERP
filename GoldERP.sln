@@ -1,9 +1,57 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
-VisualStudioVersion = 17.14.36301.6 d17.14
+VisualStudioVersion = 17.14.36301.6
 MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GoldERP.API", "GoldERP.API\GoldERP.API.csproj", "{690F3BAC-B827-81DD-B602-10BC43C3085C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GoldERP.Application", "GoldERP.Application\GoldERP.Application.csproj", "{E5B0AE81-D2B5-CE8F-7CD4-6CF0C8910CC2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GoldERP.Blazor", "GoldERP.Blazor\GoldERP.Blazor.csproj", "{FE0AFE2B-6387-8658-ABC8-11F6A336E192}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GoldERP.Domain", "GoldERP.Domain\GoldERP.Domain.csproj", "{335A9E8C-4AE0-B1ED-AD8C-5B72E1E468B5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GoldERP.Infrastructure", "GoldERP.Infrastructure\GoldERP.Infrastructure.csproj", "{24EF7562-1D1A-2ED5-147D-BC7BC9712C93}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GoldERP.Shared", "GoldERP.Shared\GoldERP.Shared.csproj", "{5E1150E3-E7B5-308D-D325-3DB8364C752B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GoldERP.Tests", "GoldERP.Tests\GoldERP.Tests.csproj", "{E7C68CD4-E97B-00C1-D91E-6584F46668D9}"
+EndProject
 Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{690F3BAC-B827-81DD-B602-10BC43C3085C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{690F3BAC-B827-81DD-B602-10BC43C3085C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{690F3BAC-B827-81DD-B602-10BC43C3085C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{690F3BAC-B827-81DD-B602-10BC43C3085C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E5B0AE81-D2B5-CE8F-7CD4-6CF0C8910CC2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E5B0AE81-D2B5-CE8F-7CD4-6CF0C8910CC2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E5B0AE81-D2B5-CE8F-7CD4-6CF0C8910CC2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E5B0AE81-D2B5-CE8F-7CD4-6CF0C8910CC2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FE0AFE2B-6387-8658-ABC8-11F6A336E192}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FE0AFE2B-6387-8658-ABC8-11F6A336E192}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FE0AFE2B-6387-8658-ABC8-11F6A336E192}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FE0AFE2B-6387-8658-ABC8-11F6A336E192}.Release|Any CPU.Build.0 = Release|Any CPU
+		{335A9E8C-4AE0-B1ED-AD8C-5B72E1E468B5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{335A9E8C-4AE0-B1ED-AD8C-5B72E1E468B5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{335A9E8C-4AE0-B1ED-AD8C-5B72E1E468B5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{335A9E8C-4AE0-B1ED-AD8C-5B72E1E468B5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{24EF7562-1D1A-2ED5-147D-BC7BC9712C93}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{24EF7562-1D1A-2ED5-147D-BC7BC9712C93}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{24EF7562-1D1A-2ED5-147D-BC7BC9712C93}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{24EF7562-1D1A-2ED5-147D-BC7BC9712C93}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5E1150E3-E7B5-308D-D325-3DB8364C752B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5E1150E3-E7B5-308D-D325-3DB8364C752B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5E1150E3-E7B5-308D-D325-3DB8364C752B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5E1150E3-E7B5-308D-D325-3DB8364C752B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E7C68CD4-E97B-00C1-D91E-6584F46668D9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E7C68CD4-E97B-00C1-D91E-6584F46668D9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E7C68CD4-E97B-00C1-D91E-6584F46668D9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E7C68CD4-E97B-00C1-D91E-6584F46668D9}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
