@@ -1,0 +1,29 @@
+﻿<div class="card shadow-sm border-0 h-100">
+    <div class="card-body text-center">
+
+        <div style="font-size:40px">
+            @Icon
+        </div>
+
+        <h6 class="text-muted mt-2">
+            @Title
+        </h6>
+
+        <h2 class="fw-bold text-warning">
+            @Value
+        </h2>
+
+    </div>
+</div>
+
+@code {
+
+    [Parameter]
+    public string Title { get; set; } = "";
+
+    [Parameter]
+    public string Value { get; set; } = "";
+
+    [Parameter]
+    public string Icon { get; set; } = "";
+}

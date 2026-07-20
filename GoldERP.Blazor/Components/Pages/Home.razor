@@ -1,7 +1,33 @@
 ﻿@page "/"
 
-<PageTitle>Home</PageTitle>
+<PageTitle>GoldERP Dashboard</PageTitle>
 
-<h1>Hello, world!</h1>
+<h1 class="mb-4">💎 GoldERP Dashboard</h1>
 
-Welcome to your new app.
+<div class="row g-3">
+
+    <div class="col-md-3">
+        <DashboardCard Title="Customers"
+                       Value="250"
+                       Icon="👥" />
+    </div>
+
+    <div class="col-md-3">
+        <DashboardCard Title="Inventory"
+                       Value="800"
+                       Icon="📦" />
+    </div>
+
+    <div class="col-md-3">
+        <DashboardCard Title="Today's Sales"
+                       Value="₹2.4 L"
+                       Icon="💰" />
+    </div>
+
+    <div class="col-md-3">
+        <DashboardCard Title="Savings Schemes"
+                       Value="120"
+                       Icon="💎" />
+    </div>
+
+</div>
