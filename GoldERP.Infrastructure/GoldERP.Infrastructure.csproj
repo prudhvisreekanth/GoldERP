@@ -6,4 +6,22 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
+  <ItemGroup>
+    <Folder Include="Persistence\Seed\" />
+    <Folder Include="Persistence\Migrations\" />
+    <Folder Include="Persistence\Configurations\" />
+    <Folder Include="Repositories\" />
+    <Folder Include="Services\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.Extensions.Http" Version="10.0.10" />
+	  <PackageReference Include="MediatR" Version="12.4.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\GoldERP.Application\GoldERP.Application.csproj" />
+    <ProjectReference Include="..\GoldERP.Shared\GoldERP.Shared.csproj" />
+  </ItemGroup>
+
 </Project>

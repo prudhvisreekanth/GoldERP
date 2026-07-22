@@ -7,8 +7,20 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="Microsoft.AspNetCore.OpenApi" Version="8.0.18" />
+    <PackageReference Include="MediatR" Version="12.4.1" />
+    <PackageReference Include="Microsoft.AspNetCore.OpenApi" Version="8.0.0" />
     <PackageReference Include="Swashbuckle.AspNetCore" Version="6.6.2" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Extensions\" />
+    <Folder Include="Middleware\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\GoldERP.Application\GoldERP.Application.csproj" />
+    <ProjectReference Include="..\GoldERP.Infrastructure\GoldERP.Infrastructure.csproj" />
+    <ProjectReference Include="..\GoldERP.Shared\GoldERP.Shared.csproj" />
   </ItemGroup>
 
 </Project>

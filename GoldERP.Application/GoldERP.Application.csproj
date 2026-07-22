@@ -6,4 +6,22 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
+  <ItemGroup>
+    <Folder Include="Common\Exceptions\" />
+    <Folder Include="Common\Helpers\" />
+    <Folder Include="Common\Constants\" />
+    <Folder Include="DTOs\" />
+    <Folder Include="Behaviours\" />
+    <Folder Include="Features\GoldRate\Validators\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="FluentValidation" Version="12.1.1" />
+	  <PackageReference Include="MediatR" Version="12.4.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\GoldERP.Shared\GoldERP.Shared.csproj" />
+  </ItemGroup>
+
 </Project>
