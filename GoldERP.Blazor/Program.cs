@@ -11,9 +11,14 @@ builder.Services.AddRazorComponents()
         options.DetailedErrors = true;
     });
 
+//builder.Services.AddScoped(sp => new HttpClient
+//{
+//    BaseAddress = new Uri("http://localhost:5194/")
+//});
+
 builder.Services.AddScoped(sp => new HttpClient
 {
-    BaseAddress = new Uri("http://localhost:5194/")
+    BaseAddress = new Uri("https://golderp-h1fu.onrender.com")
 });
 
 builder.Services.AddScoped<GoldRateApiService>();
