@@ -1,0 +1,84 @@
+﻿@page "/"
+@page "/dashboard"
+
+@using GoldERP.Application.Features.GoldRate.DTOs
+@using GoldERP.Shared.Common
+@using GoldERP.Blazor.Services
+
+@inject GoldRateApiService GoldRateService
+
+<PageTitle>Dashboard</PageTitle>
+
+<h2 class="mb-4">GoldERP Dashboard</h2>
+
+@if (isLoading)
+{
+    <div class="alert alert-info">
+        Loading latest gold rates...
+    </div>
+}
+else if (goldRate != null)
+{
+    <div class="row">
+
+        <div class="col-md-3 mb-3">
+            <div class="card shadow">
+                <div class="card-body">
+                    <h5>24K Gold</h5>
+                    <h3>₹ @goldRate.Gold24K.ToString("N2")</h3>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-3 mb-3">
+            <div class="card shadow">
+                <div class="card-body">
+                    <h5>22K Gold</h5>
+                    <h3>₹ @goldRate.Gold22K.ToString("N2")</h3>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-3 mb-3">
+            <div class="card shadow">
+                <div class="card-body">
+                    <h5>Silver</h5>
+                    <h3>₹ @goldRate.Silver.ToString("N2")</h3>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-3 mb-3">
+            <div class="card shadow">
+                <div class="card-body">
+                    <h5>Updated</h5>
+                    <small>@goldRate.LastUpdated.ToLocalTime()</small>
+                </div>
+            </div>
+        </div>
+
+    </div>
+}
+
+@code
+{
+    private GoldRateResponseDto? goldRate;
+
+    private bool isLoading = true;
+
+    protected override async Task OnInitializedAsync()
+    {
+        Console.WriteLine("Dashboard loaded");
+
+        var response = await GoldRateService.GetGoldRatesAsync();
+
+        Console.WriteLine("API call completed");
+
+        if (response != null && response.Success)
+        {
+            goldRate = response.Data;
+        }
+
+        isLoading = false;
+    }
+}

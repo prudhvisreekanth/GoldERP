@@ -1,39 +1,11 @@
 ﻿@page "/"
 
-<PageTitle>ERP Gold Jewellers</PageTitle>
+@inject NavigationManager Navigation
 
-<h1>💎 ERP GOLD JEWELLERS</h1>
-
-<h5 class="text-secondary">
-    Jewellery Management System
-</h5>
-
-<GoldRateCard />
-
-<div class="row g-3">
-
-    <div class="col-md-3">
-        <DashboardCard Title="Customers"
-                       Value="250"
-                       Icon="👥" />
-    </div>
-
-    <div class="col-md-3">
-        <DashboardCard Title="Inventory"
-                       Value="800"
-                       Icon="📦" />
-    </div>
-
-    <div class="col-md-3">
-        <DashboardCard Title="Today's Sales"
-                       Value="₹2.4 L"
-                       Icon="💰" />
-    </div>
-
-    <div class="col-md-3">
-        <DashboardCard Title="Savings Schemes"
-                       Value="120"
-                       Icon="💎" />
-    </div>
-
-</div>
+@code
+{
+    protected override void OnInitialized()
+    {
+        Navigation.NavigateTo("/dashboard", true);
+    }
+}

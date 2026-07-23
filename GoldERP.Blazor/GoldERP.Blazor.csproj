@@ -6,4 +6,9 @@
     <ImplicitUsings>enable</ImplicitUsings>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\GoldERP.Application\GoldERP.Application.csproj" />
+    <ProjectReference Include="..\GoldERP.Shared\GoldERP.Shared.csproj" />
+  </ItemGroup>
+
 </Project>

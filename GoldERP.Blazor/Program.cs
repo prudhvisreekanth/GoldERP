@@ -1,11 +1,22 @@
 using GoldERP.Blazor.Components;
+using GoldERP.Blazor.Services;
 
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddRazorComponents()
-    .AddInteractiveServerComponents();
+    .AddInteractiveServerComponents()
+    .AddCircuitOptions(options =>
+    {
+        options.DetailedErrors = true;
+    });
 
+builder.Services.AddScoped(sp => new HttpClient
+{
+    BaseAddress = new Uri("http://localhost:5194/")
+});
+
+builder.Services.AddScoped<GoldRateApiService>();
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.

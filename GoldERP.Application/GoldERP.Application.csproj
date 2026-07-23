@@ -11,8 +11,6 @@
     <Folder Include="Common\Helpers\" />
     <Folder Include="Common\Constants\" />
     <Folder Include="DTOs\" />
-    <Folder Include="Behaviours\" />
-    <Folder Include="Features\GoldRate\Validators\" />
   </ItemGroup>
 
   <ItemGroup>
