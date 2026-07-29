@@ -18,7 +18,7 @@ builder.Services.AddRazorComponents()
 
 builder.Services.AddScoped(sp => new HttpClient
 {
-    BaseAddress = new Uri("https://golderp-1.onrender.com")
+    BaseAddress = new Uri("https://golderp-api.onrender.com/")
 });
 
 builder.Services.AddScoped<GoldRateApiService>();
