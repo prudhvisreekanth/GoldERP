@@ -31,7 +31,7 @@ builder.Services.AddCors(options =>
 {
     options.AddPolicy("Blazor", policy =>
     {
-        policy.WithOrigins("https://localhost:7132") // Blazor URL
+        policy.WithOrigins("https://localhost:7132", "https://golderp-h1fu.onrender.com") // Blazor URL
               .AllowAnyHeader()
               .AllowAnyMethod();
     });
